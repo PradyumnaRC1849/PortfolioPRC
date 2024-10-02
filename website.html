@@ -1,0 +1,461 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <style>
+        /* Global styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+        /* Navbar */
+    .navbar {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .navbar .logo {
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .nav-links {
+        display: inline-block;
+        float: right;
+        list-style: none;
+    }
+
+    .nav-links li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+
+    .nav-links a:hover {
+        color: #f4f4f4;
+    }
+
+    /* Home Section */
+    .home {
+        background: url('hero-bg.jpg') no-repeat center center/cover;
+        height: 100vh;
+        text-align: center;
+        color: #fff;
+    }
+
+    .home h2 {
+        font-size: 2.5rem;
+        margin-top: 15%;
+    }
+
+    .home p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #333;
+        color: #fff;
+        padding: 0.7rem 1.2rem;
+        margin-top: 1.5rem;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 5px;
+    }
+
+    .btn:hover {
+        background-color: #555;
+    }
+
+    /* About Section */
+    .about, .portfolio, .contact {
+        padding: 4rem 0;
+        text-align: center;
+    }
+
+    .about h2, .portfolio h2, .contact h2 {
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 1.1rem;
+    }
+
+    /* Portfolio Section */
+    .portfolio-grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-item {
+        flex-basis: 30%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .portfolio-item h3 {
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+
+    /* Contact Section */
+    form {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 0.7rem;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 0.7rem;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #555;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">My Portfolio</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <section id="home" class="home">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Creative Designer & Developer</p>
+            <a href="#portfolio" class="btn">View My Work</a>
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi, I am [Your Name], a passionate web developer and designer specializing in creating modern, responsive websites. With years of experience, I have developed a strong skillset to create engaging web experiences.</p>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>My Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>--->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color:black;
+            color:aqua;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: black;
+        }
+        .navbar {
+            background-color: black;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .contain {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .navbar .logo {
+            font-weight: bolder;
+            font-size: 30px;
+            display: inline-block;
+        }
+        .nav-links {
+            float: right;
+            list-style: none;
+        }
+        .nav-links li {
+            display: inline;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .nav-links li {
+            color: white;
+            font-size: 1.1rem;
+        }
+        .nav-links li:hover {
+            color: aqua;
+        }
+
+        .home, .aboutus, .contact, .game {
+            margin-top: 80px;
+            width: 1000px;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: auto;
+            background-color: black;
+            border-radius: 60px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        ::selection {
+            background: black;
+            color: aqua;
+        }
+        .contact a {
+            color: white;
+            font-weight: 900;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            color: aqua;
+            font-weight: 800;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="contain">
+            <h1 class="logo"><b><u>Portfolio</u></b></h1>
+            <ul class="nav-links">
+                <li id="a1" style="color:aqua;"><b>HOME</b></li>
+                <li id="a2"><b>ABOUT US</b></li>
+                <li id="a4"><b>MINI GAME</b></li>
+                <li id="a3"><b>CONTACT</b></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="home" id="home" style="display:flex;">
+        <h2 style="color: white;">Hello It's me</h2>
+        <h1>Pradyumna Roy Choudhury</h1>
+        <p style="color: white;">and I am a <span style="color: aqua;">computer science engineering</span> student</p>
+    </div>
+
+    <br><br>
+
+    <div class="aboutus" id="about_us" style="display:none;">
+        <h1 style="color: white;">ABOUT <span style="color: aqua;">ME</span></h1>
+        <p style="font-weight: 900; color: white;">My name is <span style="color: aqua;">Pradyumna Roy Choudhury</span> and I am a 1st-year computer science engineering student studying in <span style="color: aqua;">Techno Mains Salt Lake college</span> under <span style="color: aqua;">MAKAUT</span>.</p>
+    </div>
+
+    <div class="contact" id="contact" style="display:none;">
+        <h1 style="color:white;text-decoration:underline solid aqua;">CONTACT US</h1>
+        <p style="font-weight: 900; color: white;">PHONE NUMBER: <span style="color: aqua;">+91-2828282828</span></p>
+        <p style="font-weight: 900; color: white;">EMAIL: <span style="color: aqua;">xyz@gmail.com</span></p>
+        <h3 style="color:white;text-decoration:underline solid aqua;">Follow us on our official social side:</h3>
+        <h4>CLICK ON:  <a href="https://www.youtube.com/@YouTube">YOU TUBE</a></h4>
+        <h4>CLICK ON:  <a href="https://x.com/X">X</a></h4>
+        <h4>CLICK ON:  <a href="https://www.instagram.com/instagram/?hl=en">INSTAGRAM</a></h4>
+    </div>
+
+    <div class="game" id="game" style="display:none;">
+        <h1 style="text-decoration:underline solid white;">GUESS THE NUMBER</h1>
+        <p style="font-weight: 900; color: yellow;">YOUR NUMBER: <span style="color: aqua;" id="yc"></span></p>
+        <p style="font-weight: 900; color: yellow;">COMPUTER'S NUMBER: <span style="color: aqua;" id="cc"></span></p>
+        <p style="font-weight: 900; color: white;">ENTER NUMBER FROM <span style="color: yellow;">1</span> TO <span style="color: aqua;">10</span></p>
+        <p style="font-weight: 900; color: aqua;" id="msg"></p>
+        <p><input type="number" value="0" id="message" style="background-color:black;color:yellow;border:7px solid green;font-weight: bolder;"><button id="btn" style="background-color: orange;color:white;border:7px solid orange;"><b>SUBMIT</b></button></p>
+    </div>
+
+    <script>
+        function k(x) {
+            return document.getElementById(x);
+        }
+        k("a1").addEventListener("click", function() {
+            this.style.color = "aqua";
+            k("a2").style.color = "white";
+            k("a3").style.color = "white";
+            k("a4").style.color = "white";
+            k("home").style.display = "flex";
+            k("about_us").style.display = "none";
+            k("contact").style.display = "none";
+            k("game").style.display="none";
+        });
+        k("a2").addEventListener("click", function() {
+            this.style.color = "aqua";
+            k("a1").style.color = "white";
+            k("a3").style.color = "white";
+            k("a4").style.color = "white";
+            k("home").style.display = "none";
+            k("about_us").style.display = "flex";
+            k("contact").style.display = "none";
+            k("game").style.display="none";
+        });
+        k("a3").addEventListener("click", function() {
+            this.style.color = "aqua";
+            k("a2").style.color = "white";
+            k("a1").style.color = "white";
+            k("a4").style.color = "white";
+            k("home").style.display = "none";
+            k("about_us").style.display = "none";
+            k("contact").style.display = "flex";
+            k("game").style.display="none";
+        });
+        k("a4").addEventListener("click", function() {
+            this.style.color = "aqua";
+            k("a2").style.color = "white";
+            k("a1").style.color = "white";
+            k("a3").style.color = "white";
+            k("home").style.display = "none";
+            k("about_us").style.display = "none";
+            k("contact").style.display = "none";
+            k("game").style.display="flex";
+        });
+        k("btn").addEventListener("click",function(){
+            var r=Math.floor(Math.random()*10)+1;
+            var s=k("message").value
+            k("yc").innerHTML=s;
+            k("cc").innerHTML=r;
+            if(s==r){
+                k("msg").innerHTML="<span style='color:white;'>YOU</span> WON";
+            }
+            else if(s!=r){
+                k("msg").innerHTML="<span style='color:yellow;'>COMPUTER</span> WON";
+            }
+        });
+    </script>
+</body>
+</html>
